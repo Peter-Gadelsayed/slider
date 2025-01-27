@@ -13,12 +13,18 @@ closeIcon.addEventListener("click", closeSlider);
 nextIcon.addEventListener("click", nextSlide);
 prevIcon.addEventListener("click", prevSlide);
 
-for (var i = 0; i < imgList.length; i++) {
+for (let i = 0; i < imgList.length; i++) {
     imgList[i].addEventListener("click", function () {
         showSlider(i)
         sliderContainer.style.display = "flex";
     });
 }
+
+sliderContainer.addEventListener("click", function (e) {
+    if (e.target.id == "sliderContainer") {
+        closeSlider();
+    }
+})
 
 
 function closeSlider() {
