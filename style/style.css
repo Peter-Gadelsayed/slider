@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin-top: 50px;
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.img-container {
+    padding: 10px;
+}
+
+.img-container img {
+    width: 250px;
+    height: 150px;
+}
+
+.fa-regular ,
+.svg-inline--fa {
+    padding: 20px;
+    color: #0048ff;
+    font-size: larger;
+    cursor: pointer;
+}
+
+#sliderContainer {
+    position: fixed;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, .5);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#sliderImg {
+    background-image: url("../image/Drona-Mountain-Lake-House-Sunrise-Scenery-Wallpaper-Mural-710x450.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 800px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+#closeIcon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
