@@ -46,8 +46,8 @@
     background-image: url("../image/Drona-Mountain-Lake-House-Sunrise-Scenery-Wallpaper-Mural-710x450.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 800px;
-    height: 500px;
+    width: 60%;
+    height: 75%;
     display: flex;
     align-items: center;
     justify-content: space-between;

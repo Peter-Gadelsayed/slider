@@ -26,6 +26,17 @@ sliderContainer.addEventListener("click", function (e) {
     }
 })
 
+document.addEventListener('keydown', function (e) {
+    if (e.keyCode == 39) {
+        nextSlide();
+    } else if (e.keyCode == 37) {
+        prevSlide();
+    } else if (e.keyCode == 27) {
+        closeSlider();
+    }
+});
+
+
 
 function closeSlider() {
     sliderContainer.style.display = "none";
@@ -35,7 +46,6 @@ function closeSlider() {
 function showSlider(index) {
     var sliderImg = document.getElementById('sliderImg');
     sliderImg.style.backgroundImage = `url(${imgList[index].src})`;
-    console.log(imgList[index].src)
     currentIndex = index;
 }
 
