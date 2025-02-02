@@ -1,11 +1,11 @@
-var closeIcon = document.getElementById("closeIcon");
-var nextIcon = document.getElementById("nextIcon");
-var prevIcon = document.getElementById("prevIcon");
-var sliderContainer = document.getElementById("sliderContainer");
+const closeIcon = document.getElementById("closeIcon");
+const nextIcon = document.getElementById("nextIcon");
+const prevIcon = document.getElementById("prevIcon");
+const sliderContainer = document.getElementById("sliderContainer");
 
-var imgList = document.querySelectorAll('.img-container img');
+let imgList = document.querySelectorAll('.img-container img');
 
-var currentIndex = 0;
+let currentIndex = 0;
 
 
 
@@ -14,19 +14,19 @@ nextIcon.addEventListener("click", nextSlide);
 prevIcon.addEventListener("click", prevSlide);
 
 for (let i = 0; i < imgList.length; i++) {
-    imgList[i].addEventListener("click", function () {
+    imgList[i].addEventListener("click", () => {
         showSlider(i)
         sliderContainer.style.display = "flex";
     });
 }
 
-sliderContainer.addEventListener("click", function (e) {
+sliderContainer.addEventListener("click", (e) => {
     if (e.target.id == "sliderContainer") {
         closeSlider();
     }
 })
 
-document.addEventListener('keydown', function (e) {
+document.addEventListener('keydown', (e) => {
     if (e.keyCode == 39) {
         nextSlide();
     } else if (e.keyCode == 37) {
@@ -44,19 +44,21 @@ function closeSlider() {
 
 
 function showSlider(index) {
-    var sliderImg = document.getElementById('sliderImg');
+    const sliderImg = document.getElementById('sliderImg');
     sliderImg.style.backgroundImage = `url(${imgList[index].src})`;
     currentIndex = index;
-}
+};
+
 
 
 function nextSlide() {
     currentIndex = currentIndex + 1;
-    if (currentIndex == imgList.length) {
-        currentIndex = 0
+    if (currentIndex === imgList.length) {
+        currentIndex = 0;
     }
     showSlider(currentIndex);
-}
+};
+
 
 function prevSlide() {
     currentIndex = currentIndex - 1;
